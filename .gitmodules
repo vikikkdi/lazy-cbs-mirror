@@ -1,0 +1,6 @@
+[submodule "library/geas"]
+	path = library/geas
+	url = https://github.com/vikikkdi/geas.git
+[submodule "library/yaml-cpp"]
+	path = library/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp
