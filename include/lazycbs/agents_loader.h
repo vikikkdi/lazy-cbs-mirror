@@ -2,8 +2,8 @@
 // First line: number of agents
 // Second line and onward, (x_init,y_init),(x_goal,y_goal) of each agent (one per line)
 
-#ifndef AGENTSLOADER_H
-#define AGENTSLOADER_H
+#ifndef AGENTSLOADER_LAZYCBS_H
+#define AGENTSLOADER_LAZYCBS_H
 
 #include <string>
 #include <vector>
