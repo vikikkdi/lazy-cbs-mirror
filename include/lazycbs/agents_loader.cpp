@@ -1,6 +1,6 @@
 //=======================================================================
-#ifndef AGENTSLOADER_CPP
-#define AGENTSLOADER_CPP
+#ifndef AGENTSLOADER_LAZYCBS_CPP
+#define AGENTSLOADER_LAZYCBS_CPP
 #include <lazycbs/agents_loader.h>
 #include <string>
 #include <cstring>
