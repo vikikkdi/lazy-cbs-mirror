@@ -10,7 +10,7 @@ using google::dense_hash_map;      // namespace where class lives by default
 using std::cout;
 using std::endl;
 using boost::heap::fibonacci_heap;
-namespace mapf{
+namespace lazycbs{
 /*
 // this is needed because otherwise we'll have to define the specilized template inside std namespace
 struct NodeHasher

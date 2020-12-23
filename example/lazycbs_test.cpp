@@ -99,14 +99,14 @@ int main(int argc, char* argv[]) {
   set_handlers();
   // read the map file and construct its two-dim array
 
-  mapf::MapLoader ml = mapf::MapLoader(dimx, dimy, obstacles);
+  lazycbs::MapLoader ml = lazycbs::MapLoader(dimx, dimy, obstacles);
   
   // read agents' start and goal locations
-  mapf::AgentsLoader al = mapf::AgentsLoader(starts, goals);
+  lazycbs::AgentsLoader al = lazycbs::AgentsLoader(starts, goals);
 
   // read the egraph (egraph file, experience_weight, weigthedastar_weight)
-  mapf::EgraphReader egr;
-mapf::MAPF_Solver mapf1(ml, al, egr, 1e8);
+  lazycbs::EgraphReader egr;
+lazycbs::MAPF_Solver mapf1(ml, al, egr, 1e8);
 
   //ofstream res_f;
   //res_f.open(results_fname, ios::app);  // append the results file
@@ -121,7 +121,7 @@ mapf::MAPF_Solver mapf1(ml, al, egr, 1e8);
   // ecbs.printPaths();
 
   auto lazycbs_start = std::chrono::system_clock::now();
-  bool success = mapf::MAPF_MinCost(mapf1);
+  bool success = lazycbs::MAPF_MinCost(mapf1);
   if(success)
     mapf1.getPaths(&solution);
   std::cout<<"Cost :: "<<solution.first<<std::endl;

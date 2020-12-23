@@ -18,7 +18,7 @@
 
 using namespace boost;
 using namespace std;
-namespace mapf{
+namespace lazycbs{
 MapLoader::MapLoader(int rows, int cols) {
   map_filename = "NEW_EMPTY";
   int i,j;

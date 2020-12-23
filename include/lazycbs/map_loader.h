@@ -9,7 +9,7 @@
 #include <vector>
 using std::string;
 using std::vector;
-namespace mapf{
+namespace lazycbs{
   class MapLoader {
    public:
     bool* my_map;

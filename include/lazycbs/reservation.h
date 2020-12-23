@@ -32,7 +32,7 @@ struct reservation {
 // automagically.
 // Alternatively, we can do the usual thing of recording changes, which saves us an additional
 // indirection on each lookup...
-namespace mapf {
+namespace lazycbs {
 struct reservation {
   static unsigned int BLOCK_MASK(void) { return (1<<6)-1; }
   static uint64_t BLOCK_OF(uint64_t t) { return t>>6; }

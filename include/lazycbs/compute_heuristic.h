@@ -7,7 +7,7 @@
 #include <lazycbs/egraph_reader.h>
 
 using namespace std;
-namespace mapf{
+namespace lazycbs{
 class ComputeHeuristic {
  public:
   double* h_vals;

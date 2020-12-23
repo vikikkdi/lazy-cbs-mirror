@@ -10,7 +10,7 @@
 
 #include <lazycbs/agent-pf.h>
 
-namespace mapf {
+namespace lazycbs {
 
 class MAPF_Solver {
  public:

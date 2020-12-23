@@ -10,13 +10,13 @@
 // #define DEBUG_UC
 // #define MAPF_NO_RECTANGLES
 
-namespace mapf {
+namespace lazycbs {
 
 static ::std::pair<int, bool*> mapf_get_res_table(MAPF_Solver* m, int excl) {
   return m->retrieve_reservation_table(excl);
 }
 
-MAPF_Solver::MAPF_Solver(const mapf::MapLoader& _ml, const mapf::AgentsLoader& _al, const mapf::EgraphReader& _egr, int UB)
+MAPF_Solver::MAPF_Solver(const lazycbs::MapLoader& _ml, const lazycbs::AgentsLoader& _al, const lazycbs::EgraphReader& _egr, int UB)
   : ml(&_ml), al(&_al), egr(&_egr), map_size(ml->rows * ml->cols)
   , reservation_table(map_size, false), cmap(map_size, -1), nmap(map_size, -1)
   , agent_set(al->num_of_agents)
@@ -30,7 +30,7 @@ MAPF_Solver::MAPF_Solver(const mapf::MapLoader& _ml, const mapf::AgentsLoader& _
     for(int ai = 0; ai < num_of_agents; ++ai) {
       int init_loc = ml->linearize_coordinate((al->initial_locations[ai]).first, (al->initial_locations[ai]).second);
       int goal_loc = ml->linearize_coordinate((al->goal_locations[ai]).first, (al->goal_locations[ai]).second);
-      mapf::ComputeHeuristic ch(goal_loc, ml->get_map(), map_size, ml->actions_offset, 1, egr);
+      lazycbs::ComputeHeuristic ch(goal_loc, ml->get_map(), map_size, ml->actions_offset, 1, egr);
 
       geas::intvar cv(s.new_intvar(0, UB));
       Agent_PF* pf(new Agent_PF(s.data, cv, init_loc, goal_loc, ch.getHVals(), ml->get_map(), map_size, ml->actions_offset, ::std::bind(mapf_get_res_table, this, ai)));

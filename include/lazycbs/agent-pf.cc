@@ -4,8 +4,9 @@
 #include <lazycbs/agent-pf.h>
 // #define EXPLAIN_LATEST
 
-namespace mapf {
+
 #ifdef MAPF_BETTER_EXPLANATIONS
+namespace lazycbs {
 void prune_blockages(vec<Agent_PF::blockage_info>& b) {
   Agent_PF::blockage_info* s(b.begin());
   Agent_PF::blockage_info* e(b.end());

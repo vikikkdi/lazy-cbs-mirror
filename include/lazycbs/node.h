@@ -12,7 +12,7 @@ using boost::heap::compare;
 
 
 using namespace std;
-namespace mapf{
+namespace lazycbs{
 class Node {
  public:
 

@@ -16,7 +16,7 @@
 
 using namespace boost;
 using namespace std;
-namespace mapf{
+namespace lazycbs{
 AgentsLoader::AgentsLoader(string fname){
   
   agents_filename = string(fname);

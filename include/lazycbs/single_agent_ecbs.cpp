@@ -15,7 +15,7 @@
 #include <lazycbs/node.h>
 
 #ifdef CHEAP_SEARCH
-namespace mapf{
+namespace lazycbs{
 
 unsigned int SingleAgentECBS::seen_sz = 0;
 unsigned char* SingleAgentECBS::seen = nullptr;

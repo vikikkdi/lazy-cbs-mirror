@@ -19,7 +19,7 @@
 #endif
 
 using std::cout;
-namespace mapf{
+namespace lazycbs{
 class SingleAgentECBS {
  public:
   // define typedefs (will also be used in ecbs_search)

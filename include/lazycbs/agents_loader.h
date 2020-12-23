@@ -9,7 +9,7 @@
 #include <vector>
 #include <utility>
 using namespace std;
-namespace mapf{
+namespace lazycbs{
 class AgentsLoader {
  public:
   int num_of_agents;

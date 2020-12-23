@@ -6,7 +6,7 @@
 #include <string>
 #include <lazycbs/map_loader.h>
 
-namespace mapf{
+namespace lazycbs{
 // generate the empty egraph ------------------------------------
 EgraphReader::EgraphReader() {
   e_graph = new my_digraph();

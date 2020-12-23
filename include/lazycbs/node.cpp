@@ -10,7 +10,7 @@
 
 using namespace boost;
 using namespace std;
-namespace mapf{
+namespace lazycbs{
 Node::Node() : id(0), g_val(0), h_val(0), parent(NULL), timestep(0), num_internal_conf(0), in_openlist(false),
 	       g_hwy_val(0), h_hwy_val(0) {
 }

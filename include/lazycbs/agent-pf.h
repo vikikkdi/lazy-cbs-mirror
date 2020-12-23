@@ -11,7 +11,7 @@
 #include <geas/mtl/bool-set.h>
 
 #define MAPF_BETTER_EXPLANATIONS
-namespace mapf {
+namespace lazycbs {
 
 using namespace geas;
 
@@ -348,7 +348,7 @@ public:
   double pathCost(void) const { return has_bypass ? bypass_path.size()-1 : history[hist_pos].cost; }
 
   // The search engine
-  mapf::SingleAgentECBS engine;
+  lazycbs::SingleAgentECBS engine;
   ::std::function<::std::pair<int, bool*>()> get_reservations;
 
   // Set of obstacles, as the engine expects to find them
