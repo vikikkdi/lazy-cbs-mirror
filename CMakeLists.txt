@@ -19,7 +19,7 @@ target_include_directories(
   INTERFACE 
   include 
   library/geas/include
-  library/yaml-cpp/include
+  #library/yaml-cpp/include
 )
 
 file(GLOB LAZY_CBS_SOURCES "include/lazycbs/*")
